@@ -1,0 +1,475 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+    <meta content="RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data" />
+    <meta content="RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data" property="og:title" />
+    <meta content="RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data" property="og:description" />
+    <meta content="images/teaser.jpg" property="og:image" />
+    <meta content="RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data" property="twitter:title" />
+    <meta content="RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data" property="twitter:description" />
+    <meta content="images/teaser.jpg" property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link href="style.css?v=v2" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="title-row">
+                <h1 class="title main-title"
+                    style="font-weight: 700; font-size: 46px; font-family: 'Varela Round',sans-serif; margin: 0">
+                    RA-Touch</h1>
+                <h2 class="title main-title">Retrieval-Augmented Touch Understanding with Enriched Visual Data</h2>
+            </div>
+            <div class="base-row author-row">
+                <div class="base-col author-col1">
+                    <a href="https://ofzlo.github.io/" target="_blank" class="author-text">
+                        Yoorhim Cho<sup>*</sup>
+                    </a>
+                </div>
+                <div class="base-col author-col1">
+                    <a href="https://redleaf-kim.github.io/" target="_blank" class="author-text">
+                        Hongyeob Kim<sup>*</sup>
+                    </a>
+                </div>
+                <div class="base-col author-col1">
+                    <a href="https://sites.google.com/g.skku.edu/semin-kim" target="_blank" class="author-text">
+                        Semin Kim<sup style="visibility: hidden">*</sup>
+                    </a>
+                </div>
+                <div class="base-col author-col1">
+                    <a href="https://zhangyj66.github.io/" target="_blank" class="author-text">
+                        Youjia Zhang<sup style="visibility: hidden">*</sup>
+                    </a>
+                </div>
+            </div>
+            <div class="base-row author-row">
+                <div class="base-col author-col2">
+                    <sup style="visibility: hidden">*</sup>
+                </div>
+                <div class="base-col author-col1">
+                    <a href="http://choiyunseok.github.io/" target="_blank" class="author-text">
+                        Yunseok Choi<sup style="visibility: hidden">*</sup>
+                    </a>
+                </div>
+                <div class="base-col author-col2">
+                    <a href="https://www.csehong.com/" target="_blank" class="author-text">
+                        Sungeun Hong<sup>†</sup>
+                    </a>
+                </div>
+                <div class="base-col author-col2">
+                    <sup style="visibility: hidden">*</sup>
+                </div>
+            </div>
+            <div class="base-row affiliation-row" style="padding-top: 1.5em;">
+                <div class="base-col affiliation-col-wide">
+                    Sungkyunkwan University
+                </div>
+            </div>
+            <div class="base-row affiliation-row">
+                <div id="equal_contrib">
+                    <sup>*</sup> Denotes equal contribution
+                </div>
+            </div>
+            <div class="link-labels base-row" style="max-width: 500px">
+                <div class="base-col icon-col"><a href="https://openreview.net/forum?id=tFEOOH9eH0" target="_blank"
+                        class="link-block">
+                        <i class="fa fas fa-file-text main-icon" style="font-size: 50px"></i>
+                    </a>
+                </div>
+                <div class="base-col icon-col"><a href="https://github.com/Max-Fu/tvl" class="link-block">
+                        <i class="fa fa-github main-icon" style="font-size: 55px"></i>
+                    </a>
+                </div>
+                <div class="base-col icon-col"><a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset" class="link-block">
+                        <i class="fa fa-database main-icon" style="font-size: 50px"></i>
+                    </a>
+                </div>
+                <div class="base-col icon-col"><a href="https://huggingface.co/mlfu7/Touch-Vision-Language-Models" class="link-block">
+                        <i class="fa fa-download main-icon" style="font-size: 55px"></i>
+                    </a>
+                </div>
+                <div class="base-col icon-col"><a href="#citation" class="link-block">
+                        <i class="fa fa-graduation-cap main-icon" style="font-size: 50px"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="link-labels base-row" style="max-width: 500px">
+                <div class="base-col icon-col"><a href="https://arxiv.org/abs/2401.14391" target="_blank"
+                        class="no-underline">
+                        <strong class="link-labels-text">Paper</strong></a>
+                </div>
+                <div class="base-col icon-col"><a href="https://github.com/Max-Fu/tvl" class="no-underline">
+                        <strong class="link-labels-text">Code</strong></a>
+                </div>
+                <div class="base-col icon-col"><a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset" class="no-underline">
+                        <strong class="link-labels-text">Dataset</strong></a>
+                </div>
+                <div class="base-col icon-col"><a href="https://huggingface.co/mlfu7/Touch-Vision-Language-Models" class="no-underline">
+                        <strong class="link-labels-text">Models</strong></a>
+                </div>
+                <div class="base-col icon-col"><a href="#citation" class="no-underline">
+                        <strong class="link-labels-text">Citation</strong></a>
+                </div>
+            </div>
+            <h1 class="tldr">
+                <b>TL;DR</b>: Tactile Perception using Vison-Language data with ImageNet-T
+            </h1>
+
+            <div class="base-row add-top-padding">
+                <div class="base-row add-top-padding">
+                    <img class="img" src="images/teaser.jpg" style="max-width:1000px; width: 55%; padding-top: 1em;" />
+                </div>
+                <h1 class="title">Abstract</h1>
+                <p class="abstract" style="text-align: justify;">
+                    Visuo-tactile perception aims to understand an object's tactile properties, such as texture, softness, and rigidity.However, the field remains underexplored because collecting tactile data is costly and labor-intensive. We observe that visually distinct objects can exhibit similar surface textures or material properties. For example, a leather sofa and a leather jacket have different appearances but share similar tactile properties. This implies that tactile understanding can be guided by material cues in visual data, even without direct tactile supervision.
+                    In this paper, we introduce <b>RA-Touch</b>, a retrieval-augmented framework that improves visuo-tactile perception by leveraging visual data enriched with tactile semantics. We carefully recaption a large-scale visual dataset with tactile-focused descriptions, enabling the model to access tactile semantics typically absent from conventional visual datasets. A key challenge remains in effectively utilizing these tactile-aware external descriptions. RA-Touch addresses this by retrieving visual-textual representations aligned with tactile inputs and integrating them to focus on relevant textural and material properties. By outperforming prior methods on the TVL benchmark, our method demonstrates the potential of retrieval-based visual reuse for tactile understanding.
+                </p>
+            </div>
+            <div class="base-row add-large-top-padding">
+                <h1 class="title">The ImageNet-T</h1>
+                <div class="base-row add-top-padding">
+                    <img class="img" src="images/dataset.jpg" />
+                </div>
+                <p class="paragraph add-top-padding">
+                    <b>ImageNet-T</b> is a dataset constructed using ImageNet, based on the intuition that objects with similar materials may share similar tactile characteristics. It contains vision and tactile-centric caption pairs. We use GPT-4o mini for labeling; while it is an efficient and powerful labeler, its object-centric nature means it may not always produce accurate tactile descriptions when provided with images alone. To address this, we guide the model to infer tactile properties by incorporating both class information and visual descriptions. The final dataset consists of up to 150,000 image-caption pairs with open-vocabulary language labels, and includes subsets of 10k, 50k, and 100k samples.</p>
+                <!-- <div class="base-row add-top-padding">
+                    <img class="img" src="images/imagenet_t_150k_sentence_hist.jpg" />
+                </div> -->
+                <div class="base-row add-top-padding">
+                    <img class="img" src="images/imagenet_t_150k_word_hist.jpg" />
+                </div>
+            </div>
+            <div class="base-row add-top-padding">
+                <h1 class="title">Model Architecture and Training</h1>
+                <div class="base-row add-top-padding">
+                    <img class="img" src="images/method.jpg" style="padding-top: 1em; padding-bottom: 1em;" />
+                </div>
+                <p class="paragraph">
+                    <b>RA-Touch</b> is a tactile-centric retrieval-augmented framework designed to enhance visuo-tactile understanding by integrating external vision-language knowledge into the tactile representation learning process.
+                    Instead of relying solely on expensive tactile data collection, RA-Touch augments internal tactile features by retrieving and incorporating relevant texture-aware information from external sources.
+                    This is achieved through a modular pipeline composed of two key components: <b>the Tactile-Guided Retriever</b> and <b>the Texture-Aware Integrator</b>.
+                </p>
+                <div class="base-row add-large-top-padding">
+                    <img class="img" src="images/module.jpg" style="max-width:1000px; width: 75%; padding-bottom: 1em;" />
+                </div>
+                <p class="paragraph">
+                    <b>The Texture-Aware Retriever</b> fuses RGB and tactile inputs to form a joint query that retrieves semantically aligned external examples, prioritizing tactile relevance over visual similarity. This allows the model to access external samples that share similar texture, material, or compliance properties, even if they differ visually.
+                    <b>The Texture-Aware Integrator</b> refines the retrieved features by applying cross-attention, where the tactile input serves as the query to extract texture-specific cues from visual and textual embeddings. These filtered features are integrated into the visuo-tactile prompt, enriching the tactile representation with context that supports fine-grained texture reasoning. Together, these modules enable RA-Touch to generalize tactile understanding without large-scale tactile supervision, making it a scalable and adaptable framework for downstream tasks in robotics and material perception.
+                </p>
+            </div>
+            <div class="base-row add-top-padding">
+                <h1 class="title">RA-Touch Quantitative Results</h1>
+                <p class="paragraph">
+                    We measure the performance of our model on a tactile-semantic understanding task. 
+                </p>
+                <div class="table-container" style="padding-bottom: 1em;">
+                    <table class="table is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" style="text-align: center; vertical-align: middle; border-right: 1px solid #b8b8b8;"></th>
+                            <th colspan="3" style="text-align: center; border-right: 1px solid #b8b8b8;">Encoder Pre-training Modalities</th>
+                            <th colspan="3" style="text-align: center; border-right: 1px solid #b8b8b8;">Score (1–10)</th>
+                            <th rowspan="2" style="text-align: center; vertical-align: middle;">p-value</th>
+                        </tr>
+                        <tr>
+                            <th style="text-align: center;">Vision</th>
+                            <th style="text-align: center;">Tactile</th>
+                            <th style="text-align: center; border-right: 1px solid #b8b8b8;">Language</th>
+
+                            <th style="text-align: center;">SSVTP</th>
+                            <th style="text-align: center;">HCT</th>
+                            <th style="text-align: center; border-right: 1px solid #b8b8b8;">TVL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">LLaVA-1.5 7B</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">3.64</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">3.55</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">3.56</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">1.21 × 10<sup>-9</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">LLaVA-1.5 13B</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">3.55</td>
+                        <td style="text-align: center;">3.63</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">3.62</td>
+                        <td style="text-align: center;">1.49 × 10<sup>-8</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">ViP-LLaVA 7B</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">2.72</td>
+                        <td style="text-align: center;">3.44</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">3.36</td>
+                        <td style="text-align: center;">8.77 × 10<sup>-14</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">ViP-LLaVA 13B</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">4.10</td>
+                        <td style="text-align: center;">3.76</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">3.83</td>
+                        <td style="text-align: center;">1.72 × 10<sup>-6</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">LLaMA-Adapter</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">2.56</td>
+                        <td style="text-align: center;">3.08</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">3.02</td>
+                        <td style="text-align: center;">2.68 × 10<sup>-17</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">BLIP-2 Opt-6.7B</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">2.02</td>
+                        <td style="text-align: center;">2.72</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">2.64</td>
+                        <td style="text-align: center;">1.92 × 10<sup>-31</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">InstructBLIP 7B</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">1.40</td>
+                        <td style="text-align: center;">1.71</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">1.44</td>
+                        <td style="text-align: center;">1.07 × 10<sup>-84</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">InstructBLIP 13B</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">1.44</td>
+                        <td style="text-align: center;">1.21</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">1.24</td>
+                        <td style="text-align: center;">4.64 × 10<sup>-88</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">GPT-4V</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">5.02</td>
+                        <td style="text-align: center;">4.42</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">4.49</td>
+                        <td style="text-align: center;">–</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">GPT-4-Turbo</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">4.91</td>
+                        <td style="text-align: center;">5.00</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">4.99</td>
+                        <td style="text-align: center;">1.25 × 10<sup>-5</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">GPT-4o</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">4.44</td>
+                        <td style="text-align: center;">4.59</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">4.57</td>
+                        <td style="text-align: center;">0.4532</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">GPT-4o mini</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">−</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">4.02</td>
+                        <td style="text-align: center;">4.72</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">4.64</td>
+                        <td style="text-align: center;">0.2101</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">TVL-LLaMA (ViT-Tiny)</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">6.09</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">4.79</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">4.94</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">4.24 × 10<sup>-5</sup></td>
+                        </tr>
+                        
+                        <tr class="ra-touch-row">
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;"><b>+ RA-Touch (ImageNet-T 10k)</b></td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">6.21 (<span style="color: #1e90ff;">+0.12</span>)</td>
+                        <td style="text-align: center;">5.09 (<span style="color: #1e90ff;">+0.30</span>)</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">5.22 (<span style="color: #1e90ff;">+0.28</span>)</td>
+                        <td style="text-align: center;">1.13 × 10<sup>-13</sup></td>
+                        </tr>
+                        
+                        <tr class="ra-touch-row">
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;"><b>+ RA-Touch (ImageNet-T 150k)</b></td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">6.27 (<span style="color: #1e90ff;">+0.18</span>)</td>
+                        <td style="text-align: center;">5.11 (<span style="color: #1e90ff;">+0.32</span>)</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">5.24 (<span style="color: #1e90ff;">+0.30</span>)</td>
+                        <td style="text-align: center;">1.08 × 10<sup>-13</sup></td>
+                        </tr>
+                        
+                        <tr class="force-white">
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">TVL-LLaMA (ViT-Small)</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">5.81</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">4.77</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">4.89</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">6.02 × 10<sup>-4</sup></td>
+                        </tr>
+                        
+                        <tr class="ra-touch-row">
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;"><b>+ RA-Touch (ImageNet-T 10k)</b></td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">6.13 (<span style="color: #1e90ff;">+0.32</span>)</td>
+                        <td style="text-align: center;">5.07 (<span style="color: #1e90ff;">+0.30</span>)</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">5.19 (<span style="color: #1e90ff;">+0.30</span>)</td>
+                        <td style="text-align: center;">7.52 × 10<sup>-12</sup></td>
+                        </tr>
+                        
+                        <tr class="ra-touch-row">
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;"><b>+ RA-Touch (ImageNet-T 150k)</b></td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">6.21 (<span style="color: #1e90ff;">+0.40</span>)</td>
+                        <td style="text-align: center;">5.13 (<span style="color: #1e90ff;">+0.36</span>)</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">5.26 (<span style="color: #1e90ff;">+0.37</span>)</td>
+                        <td style="text-align: center;">2.89 × 10<sup>-13</sup></td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">TVL-LLaMA (ViT-Base)</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">6.16</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">4.89</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8; border-top: 1px solid #b8b8b8;">5.03</td>
+                        <td style="text-align: center; border-top: 1px solid #b8b8b8;">3.46 × 10<sup>-6</sup></td>
+                        </tr>
+                        
+                        <tr class="ra-touch-row">
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;"><b>+ RA-Touch (ImageNet-T 150k)</b></td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;">6.73 (<span style="color: #1e90ff;">+0.57</span>)</td>
+                        <td style="text-align: center;">5.13 (<span style="color: #1e90ff;">+0.24</span>)</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">5.32 (<span style="color: #1e90ff;">+0.29</span>)</td>
+                        <td style="text-align: center;">2.31 × 10<sup>-14</sup></td>
+                        </tr>
+                        
+                        <tr class="ra-touch-row">
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;"><b>+ RA-Touch (ImageNet-T 150k)</b></td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;">✓</td>
+                        <td style="text-align: center;"><b>6.83 (<span style="color: #1e90ff;">+0.67</span>)</b></td>
+                        <td style="text-align: center;"><b>5.17 (<span style="color: #1e90ff;">+0.28</span>)</b></td>
+                        <td style="text-align: center; border-right: 1px solid #b8b8b8;"><b>5.36 (<span style="color: #1e90ff;">+0.33</span>)</b></td>
+                        <td style="text-align: center;">7.15 × 10<sup>-16</sup></td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                </div>
+                <p class="paragraph">
+                    RA-Touch consistently outperforms the baseline TVL-LLaMA across all backbone configurations (ViT-Tiny, Small, and Base). Notably, the ViT-Base variant achieves the highest overall performance, with the TVL score improving from 5.03 to 5.36 (+0.33) on the tactile-semantic classification task. Similar improvements are observed on the SSVTP (+0.67) and HCT (+0.28) subsets, indicating that RA-Touch effectively learns more generalized tactile representations across diverse settings.
+                    All observed performance gains are statistically significant at the α = 0.05 level, supporting the conclusion that RA-Touch’s retrieval-augmented strategy captures tactile semantics more effectively than traditional vision-tactile alignment alone. Furthermore, RA-Touch consistently surpasses existing open-source vision-language and multimodal models highlighting its effectiveness in tactile understanding without requiring additional tactile supervision. 
+                </p>
+            </div>
+            <div class="base-row add-top-padding">
+                <h1 class="title">RA-Touch Qualitative Results</h1>
+                <p class="paragraph">
+                    To evaluate whether RA-Touch retrieves samples with similar material properties, we conducted a qualitative analysis using the TVL dataset.
+                </p>
+                <div class="base-row add-large-top-padding">
+                    <img class="img" src="images/retrieval_comparison.jpg" style="max-width:1000px; width: 75%" />
+                </div>
+                <p class="paragraph">
+                    <b>Top-1 to Top-5 Retrieval Samples</b>.
+                    RA-Touch generally retrieves samples that share similar textures with the query input, and we also observe high material consistency among the retrieved samples themselves. To qualitatively assess this behavior, we visualize Top-1 to Top-5 retrieval results using the TVL dataset. These examples demonstrate RA-Touch’s ability to retrieve texture-aligned samples in a visually diverse but materially coherent manner.
+                </p>
+                <div class="base-row add-large-top-padding">
+                    <img class="img" src="images/retrieval_valid.jpg" style="max-width:1000px; width: 75%" />
+                </div>
+                <p class="paragraph">
+                    <b>Comparison with Baseline Retrieval Methods</b>.
+                    We further compare RA-Touch with various retrieval baselines using all possible combinations of query and retrieval modalities, including image-to-image, image-to-text, tactile-to-image, and tactile-to-text. All encoders are based on OpenCLIP; for tactile inputs, we use the TVL encoder aligned with the vision encoder. As illustrated in the figure, image-based retrieval tends to focus on background regions when they dominate the input. Tactile-only queries also struggle to consistently retrieve samples with similar textures. In contrast, the Tactile-Guided Retriever in RA-Touch modulates vision embeddings using tactile inputs, resulting in more semantically relevant and materially aligned retrievals. These findings highlight the importance of tactile-guided retrieval for effective texture understanding.
+                </p>
+            </div>
+
+            <div class="citation add-large-top-padding">
+                <h1 id="citation">Citation</h1>
+                <p style="font-size: 16px">If you use this work or find it helpful, please consider citing our work.</p>
+                <pre id="codecell">
+To be updated ...
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <p class="credit">Credit: The design of this project page references the project pages of <a
+            href="https://tactile-vlm.github.io/">TVL</a>, <a
+            href="https://aim-skku.github.io/QA-TIGER/">QA-TIGER</a>, <a
+            href="https://www.matthewtancik.com/nerf">NeRF</a>, <a
+            href="https://crossmae.github.io">CrossMAE</a>, <a
+            href="https://github.com/DeepMotionEditing/DeepMotionEditing.github.io">DeepMotionEditing</a>, and <a
+            href="https://www.lerf.io/">LERF</a>.</p>
+</body>
