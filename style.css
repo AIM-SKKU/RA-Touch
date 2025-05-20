@@ -65,7 +65,7 @@ body {
 
 .base-row {
     margin-left: 0px;
-    margin-right: 0px;
+    margin-right: 0px;;
 }
 
 .base-row img {
@@ -90,6 +90,7 @@ body {
 
 .author-row {
     max-width: 700px;
+    text-decoration: none;
 }
 
 .affiliation-row {
@@ -120,9 +121,13 @@ body {
 
 .author-text {
     font-family: 'Open Sans',sans-serif;
-    color: #333;
+    color: hsl(204, 86%, 53%);
     font-size: 16px;
     font-weight: 400;
+    text-decoration: none;
+}
+
+.author-text:hover {
     text-decoration: underline;
 }
 
