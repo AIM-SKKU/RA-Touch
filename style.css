@@ -204,9 +204,9 @@ body {
     margin-bottom: 20px;
     /* margin-left: 110px;
     margin-right: 110px; */
-    max-width: 700px; /* 예시: 최대 너비 800px */
-    margin-left: auto; /* 좌우 여백 자동 */
-    margin-right: auto; /* 좌우 여백 자동 */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Open Sans',sans-serif;
     color: #333;
     font-size: 16px;
