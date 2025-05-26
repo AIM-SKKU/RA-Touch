@@ -25,11 +25,10 @@ on the TVL benchmark, our method demonstrates the potential of retrieval-based v
 
 ## 📖BibTeX
 ```bibtex
-  @article{
-    cho2025ratouchretrievalaugmentedtouchunderstanding,
-    title   ={RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data}, 
-    author  ={Yoorhim Cho and Hongyeob Kim and Semin Kim and Youjia Zhang and Yunseok Choi and Sungeun Hong},
-    journal ={arXiv preprint arXiv:2505.14270},
-    year    ={2025}
-  }
+@article{cho2025ra,
+  title={RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data},
+  author={Cho, Yoorhim and Kim, Hongyeob and Kim, Semin and Zhang, Youjia and Choi, Yunseok and Hong, Sungeun},
+  journal={arXiv preprint arXiv:2505.14270},
+  year={2025}
+}
 ```
