@@ -8,7 +8,7 @@
 > Sungkyunkwan University <br>
 
 <a href="https://aim-skku.github.io/RA-Touch/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a> &ensp;
-<a href="[https://arxiv.org/abs/2312.04005](https://arxiv.org/abs/2505.14270)"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:RA-Touch&color=red&logo=arxiv"></a> &ensp;
+<a href="https://arxiv.org/abs/2505.14270"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:RA-Touch&color=red&logo=arxiv"></a> &ensp;
 
 ## Abstract
 ### TL;DR
