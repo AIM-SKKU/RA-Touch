@@ -3,7 +3,7 @@
 # RA-Touch
 
 > **[RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data](https://arxiv.org/abs/2505.14270)**<br>
-> [Yoorhim Cho](https://ofzlo.github.io/)<sup>\*</sup>, [Hongyeob Kim](https://redleaf-kim.github.io/)<sup>\*</sup>, [Semin Kim](https://sites.google.com/g.skku.edu/semin-kim), [Youjia Zhang](https://zhangyj66.github.io/), [Yunseok Choi](https://choiyunseok.github.io/), [Sungeun Hong](https://www.csehong.com/)<sup>†</sup> <br>
+> [Yoorhim Cho](https://ofzlo.github.io/)<sup>\*</sup>, [Hongyeob Kim](https://redleaf-kim.github.io/)<sup>\*</sup>, [Semin Kim](https://sites.google.com/g.skku.edu/semin-kim), [Youjia Zhang](https://youjia-zhang.github.io/), [Yunseok Choi](https://choiyunseok.github.io/), [Sungeun Hong](https://www.csehong.com/)<sup>†</sup> <br>
 > \* Denotes equal contribution <br>
 > Sungkyunkwan University <br>
 
