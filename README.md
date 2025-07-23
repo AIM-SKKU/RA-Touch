@@ -9,7 +9,7 @@
 <a href="https://arxiv.org/abs/2505.14270"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:RA-Touch&color=red&logo=arxiv"></a> &ensp;
 
 <p align="center">
-  <img src="/images/teaser.jpg">
+  <img src="/images/teaser.jpg" width="550px">
 </p>
 
 ## Abstract
