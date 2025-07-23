@@ -1,0 +1,23 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+torchvision
+torch==2.5.1
+timm==0.9.7
+scipy
+matplotlib
+tensorboard
+open-clip-torch==2.24.0
+scikit-learn==1.3.2
+tqdm
+fairscale
+sentencepiece
+Pillow
+opencv-python
+gradio
+autofaiss
+diffusers
+plotly
+easydict
+huggingface_hub
+transformers
+open3d
+openai==0.28
