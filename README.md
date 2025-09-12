@@ -120,10 +120,11 @@ This repository is built using the [TVL](https://github.com/Max-Fu/tvl) reposito
 
 ## 📖BibTeX
 ```bibtex
-@article{cho2025ra,
-  title={RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data},
-  author={Cho, Yoorhim and Kim, Hongyeob and Kim, Semin and Zhang, Youjia and Choi, Yunseok and Hong, Sungeun},
-  journal={arXiv preprint arXiv:2505.14270},
-  year={2025}
+@inproceedings{
+    cho2025ra,
+    title={RA-Touch: Retrieval-Augmented Touch Understanding with Enriched Visual Data},
+    author={Cho, Yoorhim and Kim, Hongyeob and Kim, Semin and Zhang, Youjia and Choi, Yunseok and Hong, Sungeun},
+    booktitle={ACM Multimedia 2025},
+    year={2025},
 }
 ```
