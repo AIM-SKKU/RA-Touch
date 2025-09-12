@@ -106,14 +106,23 @@ bash scripts/eval_ra_touch.sh <gpu_ids> <vit_type> <retriever_ckpt> <ra_touch_ck
 We follow the same paired t-test as [TVL](https://github.com/Max-Fu/tvl). Please replace the OpenAI API key in `scripts/openai_key.txt` after obtaining your [OPENAI_API_Key](https://platform.openai.com/api-keys)
 
 ## Dataset
-TBU
+The dataset is hosted on [HuggingFace](https://huggingface.co/datasets/yoorhim/ImageNet-T). To use the dataset, we first download them using the GUI or use git:
+```bash
+# install git-lfs
+sudo apt install git-lfs
+git lfs install
+# clone the dataset
+git clone https://huggingface.co/datasets/yoorhim/ImageNet-T
+# or you can download the zip files manually from here: https://huggingface.co/datasets/yoorhim/ImageNet-T/tree/main
+```
+
 
 ## Models
 TBU
 
 ## To-Do List
 - [ ] Training Code
-- [ ] Release ImgeNet-T Dataset
+- [x] Release ImgeNet-T Dataset
 
 ## Acknowledgement
 This repository is built using the [TVL](https://github.com/Max-Fu/tvl) repository.
